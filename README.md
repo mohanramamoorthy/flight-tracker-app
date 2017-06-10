@@ -15,11 +15,11 @@
 2. Check out the application flight-tracker 
 3. Build the application using following command
 
-**maven** install
+>**maven** install
 
 4. Run the application using the following command
 
-**java -jar target/flight-tracker-app-1.0.0.jar**
+>**java -jar target/flight-tracker-app-1.0.0.jar**
 
 5. Use the options as instructed
 
