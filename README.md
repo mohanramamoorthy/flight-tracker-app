@@ -18,4 +18,12 @@
 **maven** install
 
 4. Run the application using the following command
-5. Use the options as instructed in the Note
+
+**java -jar target/flight-tracker-app-1.0.0.jar**
+
+5. Use the options as instructed
+
+## Notes
+
+* The program execution will be terminated for the wrong inputs
+* The program doesn't loop in the same path which is already traversed
