@@ -1,13 +1,21 @@
 # flight-tracker
 ### Flight Tracker Application
 
-## Environment
+## Environment Used
 
 * JDK - 1.8.0_101
 * Maven - 3.5.0 
 * Eclipse - Neon
 * OS - Mac OS X - 10.12.5
 
+## Build Environment requirement
+* JDK - 1.8.0_101
+* Maven - 3.5.0 
+* Eclipse - Neon
+* OS - Mac OS X - 10.12.5 / Windows 10
+
+## Runtime Environment Requirement
+* JDK / JRE - 1.8
 
 ## Steps to build the application
 
