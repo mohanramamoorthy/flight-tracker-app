@@ -29,9 +29,9 @@
 
 >**java -jar target/flight-tracker-app-1.0.0.jar**
 
-5. Use the options as instructed
+5. Use the options as instructed by the application
 
 ## Notes
 
 * The program execution will be terminated for the wrong inputs
-* The program doesn't loop in the same path which is already traversed
+
