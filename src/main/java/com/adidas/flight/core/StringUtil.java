@@ -11,12 +11,13 @@ import com.adidas.flight.service.impl.Route;
  * @author mohanramamoorthy
  *
  */
-public final class StringUtil {
+public final class StringUtil { 
+	public static final String PATTERN_CONNECTION = "^(Connections:( ?[A-Z]{3}-[A-Z]{3}-\\d+,?)+)";
 	public static final String PATTERN_STATION_CODE = "[A-Z]{3}";
 	public static final String PATTERN_FLIGHT_ROUTES = "([A-Z]{3})-([A-Z]{3})-(\\d+)";
 	public static final String PATTERN_SINGLE_DIGIT = "//d";
 	public static final String PATTERN_MORE_DIGIT = "//d+";
-	public static final String PATTERN_ALPHA_HYPHEN = "([A-Z-]+)";
+	public static final String PATTERN_ALPHA_HYPHEN = "([A-Z]{3})(-[A-Z]{3})+";
 
 	public static final String STR_FROM = "From : ";
 	public static final String STR_TO = "To : ";

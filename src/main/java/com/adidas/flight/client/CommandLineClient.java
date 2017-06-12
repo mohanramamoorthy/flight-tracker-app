@@ -39,6 +39,7 @@ public class CommandLineClient {
 			System.out.println("Format : AAA-BBB-CCC");
 			System.out.print("What is the price of the connection ? : ");
 			String connection = scanner.next(StringUtil.PATTERN_ALPHA_HYPHEN);
+			System.out.println(connection);
 			System.out.println(routeService.getConnectionPrice(connection));
 		} catch (FlightException e) {
 			System.out.println(e.getMessage());
@@ -178,7 +179,8 @@ public class CommandLineClient {
 					"Note : The connection should starts with \"Connections:\". The format should be source(XXX)-destination(XXX)-price(XXXX) and comma seperated.");
 			System.out.print("Enter the comma seperated connection string in this format : ");
 
-			String connections = scanner.nextLine();
+			scanner.useDelimiter("\\n");
+			String connections = scanner.next(StringUtil.PATTERN_CONNECTION);
 			if (!connections.isEmpty()) {
 				CommandLineClient commandLineClient = new CommandLineClient(
 						new RouteServiceImplementation(connections));
@@ -219,6 +221,7 @@ public class CommandLineClient {
 						commandLineClient.processRouteForMaxPriceBetween(scanner);
 						break;
 					default:
+						System.out.println("-------------------------    THANK YOU !!    -----------------------------");
 						System.exit(0);
 					}
 				}

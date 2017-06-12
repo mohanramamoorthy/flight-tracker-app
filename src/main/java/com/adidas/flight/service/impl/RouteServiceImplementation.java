@@ -111,10 +111,7 @@ public class RouteServiceImplementation implements RouteService {
 
 		int counter = 0;
 		for (EvaluatedRoute possibleRoute : listOfRoutes) {
-			int stopOvers = 0;
-			if (possibleRoute.getRoutes() != null) {
-				stopOvers = possibleRoute.getRoutes().size() - 1;
-			}
+			int stopOvers = possibleRoute.getSize() - 1;
 			if (stopOvers <= maxNoOfStops) {
 				counter++;
 			}
@@ -138,10 +135,7 @@ public class RouteServiceImplementation implements RouteService {
 
 		int counter = 0;
 		for (EvaluatedRoute possibleRoute : listOfRoutes) {
-			int stopOvers = 0;
-			if (possibleRoute.getRoutes() != null) {
-				stopOvers = possibleRoute.getRoutes().size() - 1;
-			}
+			int stopOvers = possibleRoute.getSize() - 1;
 			if (stopOvers >= minNoOfStops) {
 				counter++;
 			}
@@ -165,10 +159,7 @@ public class RouteServiceImplementation implements RouteService {
 
 		int counter = 0;
 		for (EvaluatedRoute possibleRoute : listOfRoutes) {
-			int stopOvers = 0;
-			if (possibleRoute.getRoutes() != null) {
-				stopOvers = possibleRoute.getRoutes().size() - 1;
-			}
+			int stopOvers = possibleRoute.getSize() - 1;
 			if (stopOvers == noOfStops) {
 				counter++;
 			}

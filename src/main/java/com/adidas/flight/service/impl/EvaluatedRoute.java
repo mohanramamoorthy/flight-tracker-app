@@ -21,6 +21,8 @@ public class EvaluatedRoute implements Comparable<EvaluatedRoute> {
 
 	private String routeStr = null;
 
+	private int size = 0;
+
 	/**
 	 * 
 	 * @param price
@@ -30,8 +32,11 @@ public class EvaluatedRoute implements Comparable<EvaluatedRoute> {
 		super();
 		this.price = price;
 		this.routes = routes;
-		this.routeStr = StringUtil.buildRouteString(routes, false);
-		this.routeWithPrice = StringUtil.buildHyphenSeperatedString(routeStr, String.valueOf(price));
+		if (routes != null) {
+			this.size = routes.size();
+			this.routeStr = StringUtil.buildRouteString(routes, false);
+			this.routeWithPrice = StringUtil.buildHyphenSeperatedString(routeStr, String.valueOf(price));
+		}
 	}
 
 	/**
@@ -42,9 +47,16 @@ public class EvaluatedRoute implements Comparable<EvaluatedRoute> {
 	}
 
 	/**
+	 * @return the size
+	 */
+	public int getSize() {
+		return size;
+	}
+
+	/**
 	 * @return the routes
 	 */
-	public List<Route> getRoutes() {
+	private List<Route> getRoutes() {
 		return routes;
 	}
 
