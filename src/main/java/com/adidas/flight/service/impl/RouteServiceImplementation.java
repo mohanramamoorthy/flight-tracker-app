@@ -90,7 +90,7 @@ public class RouteServiceImplementation implements RouteService {
 	public String getRouteForMaxPriceBetween(String origin, String destination, int maxPrice) throws FlightException {
 		List<EvaluatedRoute> listOfEvaluatedRoutes = routeBuilder.getAllPossibleRoutes(origin, destination, maxPrice);
 
-		if (listOfEvaluatedRoutes == null) {
+		if (listOfEvaluatedRoutes.isEmpty()) {
 			throw new FlightException(StringUtil.STR_NO_CONNECTION);
 		}
 		return StringUtil.buildCommaSeperatedString(listOfEvaluatedRoutes, true);

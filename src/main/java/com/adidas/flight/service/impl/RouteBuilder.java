@@ -94,7 +94,7 @@ public class RouteBuilder {
 	 */
 	public List<EvaluatedRoute> getAllPossibleRoutes(String origin, String destination) throws FlightException {
 		routeList = new ArrayList<>();
-		this.listOfEvaluatedRoutes = new TreeSet<>();
+		listOfEvaluatedRoutes = new TreeSet<>();
 		iterateAllPossibleRoutes(origin, destination, 0);
 		return new ArrayList<>(listOfEvaluatedRoutes);
 	}
@@ -148,7 +148,7 @@ public class RouteBuilder {
 	public List<EvaluatedRoute> getAllPossibleRoutes(String origin, String destination, int maxPrice)
 			throws FlightException {
 		routeList = new ArrayList<>();
-		this.listOfEvaluatedRoutes = new TreeSet<>();
+		listOfEvaluatedRoutes = new TreeSet<>();
 		iterateAllPossibleRoutes(origin, destination, 0, maxPrice);
 		return new ArrayList<>(listOfEvaluatedRoutes);
 	}
